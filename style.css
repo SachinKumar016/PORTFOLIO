@@ -1,0 +1,350 @@
+:root{
+    --h:20px
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background: #131518;
+    overflow-x: hidden;
+}
+.nav{
+    width:100vw;
+    height:5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 10;
+    background-color: #131518;
+    animation: nav 0.5s ease-in 0s 1 normal ;
+}
+@keyframes nav{
+    0%{
+        position: absolute;
+        top:-4vw;
+        opacity: 0%;
+    }
+    100%{
+        position: absolute;
+        top:0vw;
+        opacity: 100%;
+    }
+}
+h1{
+    background-color: transparent;
+    font-family: Trirong;
+    margin-left: 10px;
+    color: #e9ecef;
+}
+.list{
+    width: 30vw;
+    display: flex;
+    font-size: 3.7vw;
+    justify-content: space-evenly;
+}
+a{
+    color:#e9ecef;
+}
+.logo{
+    position: absolute; /* Use absolute positioning */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    width: var(--h);
+    height: var(--h);
+    border-radius: 50%;
+    border: 2px solid #6c757d;
+    border-bottom: 2px solid transparent;
+}
+.stick{
+    width: 2px;
+    height: var(--h);
+    background-color:#6c757d;
+    position: relative;
+    top:50%;
+    place-self: center;
+}
+.main{
+    display: grid;
+}
+.grid{
+    margin-top: 8vw;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    display: grid;
+    grid-template-columns:repeat(10, 9.4vw);
+    grid-template-rows: repeat(6, 9.4vw);
+    grid-row-gap: 30px;
+    grid-column-gap:20px ;
+}
+.identity{
+    grid-column-start: 1;
+    grid-column-end:4 ;
+    grid-row-start: 1;
+    grid-row-end:5 ;
+    display: grid;
+    justify-content: center;
+    border-radius: 15px;
+    position: relative;
+    color: #e9ecef;
+    background-image: linear-gradient(-135deg, rgb(39, 39, 39), black);
+    box-shadow: 1px 1px 15px black;
+    padding: 10px;
+}
+.identity:hover .stick{
+    background-color:#e9ecef;
+    transition-duration:0.3s;
+}
+img{
+    width:20vw;
+    height: 20vw;
+    place-self: center;
+    position: relative;
+    top:-15px;
+    border-radius: 30px 0px 30px 0px;
+}
+h2{
+    font-size: 30px;
+    font-family: Trirong;
+    margin-left: 10px;
+    place-self: start;
+    letter-spacing: 2px;
+    color: #e9ecef;
+}
+.intro{
+    place-self: center;
+    text-align: center;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 17px;
+    font-family:Trirong;
+}
+
+.qualification {
+        position: relative; /* Establish a positioning context */
+        grid-column: 4/7;
+        grid-row: 1/3;
+        border-radius: 15px;
+        background-image: linear-gradient(-135deg, rgb(39, 39, 39), black);
+        box-shadow: 1px 1px 15px black;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 70%, 30%;
+        grid-template-rows: 20%, 80%;
+}
+.qual{
+    place-self: center;
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+.text{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    font-size: 25px;
+    position: relative;
+    top:-100px;
+    right:23px;
+    color:#e9ecef;
+    font-family: Trirong;
+}
+.qualification:hover .logo, .identity:hover .logo, .python:hover .logo, .web:hover .logo, .Project:hover .logo, .contact:hover .logo, .experience:hover .logo, .Modelling:hover .logo{
+    border: 2px solid #e9ecef;
+    border-bottom: 2px solid transparent;
+    transition-duration:0.3s ;
+}
+.qualification:hover .stick,.identity:hover .stick, .python:hover .stick, .web:hover .stick, .Project:hover .stick, .contact:hover .stick, .experience:hover .stick, .Modelling:hover .stick{
+    background-color:#e9ecef;
+    transition-duration:0.3s;
+}
+.python{
+    grid-column:7/10;
+    grid-row: 1/2;
+    display: grid;
+    border-radius: 15px;
+    position: relative;
+    color: #e9ecef;
+    background-image: linear-gradient(-135deg, rgb(39, 39, 39), black);
+    box-shadow: 1px 1px 15px black;
+    padding: 10px;
+    grid-template-columns: 1;
+
+}
+.k{
+    display: flex;
+    align-items: center;
+}
+.text2{
+    font-size: 25px;
+    position: relative;
+    color:#e9ecef;
+    font-family: Trirong;
+}
+.py{
+    width:3vw;
+    height: 4vw;
+    border-radius: 0px;
+    position: relative; 
+    top:0px;
+    z-index: 3;
+}
+
+.lib{
+    display: flex;
+    width:20vw;
+    height: 5vw;
+    text-align: center;
+    gap: 25px;
+}
+.ska{
+    position: relative;
+    font-size: 20px;
+    top:15%
+}
+.numpy{
+    background-size: cover;
+    width: 45px;
+    border-radius: 0px;
+    height: 45px;
+}
+.panda{
+    width:45px;
+    height: 45px;
+    filter:drop-shadow(1px 1px 1px white);
+    border-radius: 0px;
+}
+.web{
+    grid-column:7/9;
+    grid-row: 2/3;
+    border-radius: 15px;
+    background-image: linear-gradient(-135deg, rgb(39, 39, 39), black);
+    box-shadow: 1px 1px 15px black;
+    padding: 10px;
+    display: grid;
+    border-radius: 15px;
+    position: relative;
+    color: #e9ecef;
+}
+.Modelling{
+    grid-column:9/10;
+    grid-row: 2/3;
+    border-radius: 15px;
+    background-image: linear-gradient(-135deg, rgb(39, 39, 39), black);
+    box-shadow: 1px 1px 15px black;
+    padding: 10px;
+    display: grid;
+    border-radius: 15px;
+    position: relative;
+    color: #e9ecef;
+}
+.Project{
+    grid-column:4/10;
+    grid-row: 3/5;
+    border-radius: 15px;
+    background-image: linear-gradient(-135deg, rgb(39, 39, 39), black);
+    box-shadow: 1px 1px 15px black;
+    padding: 10px;
+    display: grid;
+    border-radius: 15px;
+    position: relative;
+    color: #e9ecef;
+}
+.result{
+    z-index: 0;
+    display: none;
+}
+.empty{
+    width: 200px;
+    height: 200px;
+    display: grid;
+    justify-self: center;
+    position: relative;
+    bottom:30px;
+    background-image: url('https://pictographic.azureedge.net/thumbnails/flat-modern/FpxxvmBevL7kfxq5UuIK.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter:grayscale(100);
+    color: #e9ecef;
+}
+.text3{
+    position: absolute;
+    bottom:10px;
+    place-self: center;
+    font-size: 20px;
+    color: #ADB5BD;
+    filter: none;
+    font-family:sans-serif;
+    font-weight: 1000;   
+}
+.Base{
+    z-index: 3;
+    margin:10px;
+    position: relative;
+    bottom: 30px;
+    font-size: 20px;
+    list-style: none;
+    line-height: 40px;
+}
+.contact{
+    grid-column:1/5;
+    grid-row: 5/7;
+    border-radius: 15px;
+    background-image: linear-gradient(-135deg, rgb(39, 39, 39), black);
+    box-shadow: 1px 1px 15px black;
+    padding: 10px;
+    display: grid;
+    border-radius: 15px;
+    position: relative;
+    color: #e9ecef;
+}
+.ceer{
+    display: flex;
+}
+.SQL{
+    width: 18vw;
+    height: 15vw;
+    margin-left: 10px;
+    border-radius: 20px;
+    background-color: #e9ecef88;
+}
+.sql{
+    position: relative;
+    top: 10px;
+    left: 12px;
+    bottom: 10px;
+    right:12px;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    place-self: center;
+}
+p{
+    z-index: 3;
+    position: relative;
+    bottom: 4vw;
+    left: 17px;
+    opacity: 0;
+}
+.SQL:hover p{
+    opacity: 100;
+    transition-duration: 0.4s;
+}
+.SQL:hover .sql{
+    filter:brightness(0.3);
+    transition-duration: 0.3s;
+    scale:1.1
+}
+.experience{
+    grid-column:5/10;
+    grid-row: 5/7;
+    border-radius: 15px;
+    background-image: linear-gradient(-135deg, rgb(39, 39, 39), black);
+    box-shadow: 1px 1px 15px black;
+    padding: 10px;
+    display: grid;
+    border-radius: 15px;
+    position: relative;
+    color: #e9ecef;
+}
