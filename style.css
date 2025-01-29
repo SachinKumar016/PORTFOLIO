@@ -348,3 +348,21 @@ p{
     position: relative;
     color: #e9ecef;
 }
+.abs{
+    z-index: 4;
+    width: 10vw;
+    height: 10vw;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border:10px solid #6c757d52
+}
+.te{
+    font-size:20px
+}
+.rating{
+    
+}
