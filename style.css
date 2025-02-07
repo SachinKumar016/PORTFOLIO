@@ -150,22 +150,27 @@ h2{
         box-shadow: 1px 1px 15px black;
         padding: 10px;
         display: grid;
-        grid-template-columns: 70%, 30%;
-        grid-template-rows: 20%, 80%;
+        grid-template-columns: 19.74vw, 8.46vw;
+        grid-template-rows: 3.76vw, 15.04vw;
         animation: appear 0.6s ease-in 0.1s normal;
+        overflow: hidden;
 }
 .qual{
     place-self: center;
     grid-row: 1/3;
     grid-column: 1/2;
+    position: relative;
+    right: 20px;
 }
 .text{
     grid-row: 2/3;
     grid-column: 2/3;
-    font-size: 25px;
+    font-size: 6rem;
     position: relative;
-    top:-100px;
-    right:23px;
+    top:-0vw;
+    right: 4vw;
+    bottom: 0vw;
+    left: -4vw;
     color:#e9ecef;
     font-family: Trirong;
     font-size:30px
@@ -185,10 +190,91 @@ h2{
     font-size: 25px;
     color:#e9ecef;
 }
+.college{
+    font-size: 25px;
+    color:#e9ecef;
+}
 .tray{
-    grid-row: 2/3;
-    grid-column: 0/3;
     font-size: 20px;
+    transform:translateX(0px);
+
+}
+.def{
+    display: flex;
+    width:30vw;
+    gap:40px;
+    opacity: 0;
+    position: relative;
+    right:0vw;
+    top:4.5vw;
+}
+.ghi{
+    margin-top: 18px;
+    display: flex;
+    width:30vw;
+    gap:40px;
+    opacity: 0;
+    position: relative;
+    right:0vw;
+    top:4.5vw;
+}
+.th1{
+    font-size: 20px;
+    color: #ADB5BD;
+    width:10vw
+}
+.th2{
+    margin-top: 10px;
+    font-size: 20px;
+    color: #ADB5BD;
+    width:10vw
+}
+.c{
+    font-size: 15px;
+}
+.qualification:hover .qual{
+    transform: translateX(-350px);
+    transition-duration: 1.5s;
+}
+.qualification:not(:hover) .qual{
+    transform: translateX(0px);
+    transition-duration: 1.5s;
+}
+.qualification:hover .def, .qualification:hover .ghi{
+    display: flex;
+    position: relative;
+    right:19vw;
+    top:4.5vw;
+    opacity: 1;
+    transition-duration: 2s;
+    transform: translateZ(0px);
+}
+.qualification:not(:hover) .def, .qualification:not(:hover) .ghi{
+    display: flex;
+    position: relative;
+    right:0vw;
+    top:4.5vw;
+    opacity: 0;
+    transition-duration: 1s;
+    transform: translateZ(0px);
+}
+.qualification:hover .text{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    position:relative;
+    top:-15vw;
+    right:19vw;
+    bottom: 0vw;
+    left: -19vw;
+    transition-duration: 1.5s;
+}
+.qualification:not(:hover) .text{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    position:relative;
+    top:-6vw;
+    right:4vw;
+    transition-duration: 1.5s;
 }
 .python{
     grid-column:7/10;
@@ -245,6 +331,11 @@ h2{
     width: 55px ;
     transition-duration: 0.3s;
 }
+.numpy:not(:hover){
+    scale:1;
+    width: 45px ;
+    transition-duration: 0.3s;
+}
 .panda{
     width:45px;
     height: 45px;
@@ -255,6 +346,12 @@ h2{
     scale:1.3;
     filter:drop-shadow(1px 1px 1px white);
     width: 55px ;
+    transition-duration: 0.3s;
+}
+.panda:not(:hover){
+    scale:1;
+    filter:drop-shadow(1px 1px 1px white);
+    width: 45px ;
     transition-duration: 0.3s;
 }
 .web{
@@ -391,10 +488,20 @@ p{
     color: #e9ecef;
     transition-duration: 0.4s;
 }
+.SQL:not(:hover) p{
+    opacity: 0;
+    color: #e9ecef;
+    transition-duration: 0.4s;
+}
 .SQL:hover .sql{
     filter:brightness(0.3);
     transition-duration: 0.3s;
     scale:1.06
+}
+.SQL:not(:hover) .sql{
+    filter:brightness(1);
+    transition-duration: 0.3s;
+    scale:1
 }
 .experience{
     grid-column:5/10;
@@ -508,4 +615,102 @@ ol{
 }
 a{
     text-decoration:none;
+}
+@media (width<1480px){
+    .grid{
+        margin-top: 8vw;
+        margin-left: 1.5vw;
+        margin-right: 1.5vw;
+        display: grid;
+        grid-template-columns:repeat(10, 9.4vw);
+        grid-template-rows: repeat(6, 9.4vw);
+        grid-row-gap: 30px;
+        grid-column-gap:20px ;
+    }
+}
+@media (width>1480px){
+    .college{
+        font-size: 25px;
+        color:#e9ecef;
+    }
+    .tray{
+        font-size: 20px;
+        transform:translateX(0px);
+    
+    }
+    .def{
+        display: flex;
+        width:30vw;
+        gap:40px;
+        opacity: 0;
+        position: relative;
+        right:0vw;
+        top:4.5vw;
+    }
+    .ghi{
+        margin-top: 18px;
+        display: flex;
+        width:30vw;
+        gap:40px;
+        opacity: 0;
+        position: relative;
+        right:0vw;
+        top:4.5vw;
+    }
+    .th1{
+        font-size: 20px;
+        color: #ADB5BD;
+        width:10vw
+    }
+    .th2{
+        margin-top: 10px;
+        font-size: 20px;
+        color: #ADB5BD;
+        width:10vw
+    }
+    .c{
+        font-size: 15px;
+    }
+    .qualification:hover .qual{
+        transform: translateX(-350px);
+        transition-duration: 1.5s;
+    }
+    .qualification:not(:hover) .qual{
+        transform: translateX(0px);
+        transition-duration: 1.5s;
+    }
+    .qualification:hover .def, .qualification:hover .ghi{
+        display: flex;
+        position: relative;
+        right:19vw;
+        top:4.5vw;
+        opacity: 1;
+        transition-duration: 2s;
+        transform: translateZ(0px);
+    }
+    .qualification:not(:hover) .def, .qualification:not(:hover) .ghi{
+        display: flex;
+        position: relative;
+        right:0vw;
+        top:4.5vw;
+        opacity: 0;
+        transition-duration: 1s;
+        transform: translateZ(0px);
+    }
+    .qualification:hover .text{
+        grid-row: 2/3;
+        grid-column: 2/3;
+        position:relative;
+        top:-12vw;
+        right:19vw;
+        transition-duration: 1.5s;
+    }
+    .qualification:not(:hover) .text{
+        grid-row: 2/3;
+        grid-column: 2/3;
+        position:relative;
+        top:-6vw;
+        right:4vw;
+        transition-duration: 1.5s;
+    }
 }
