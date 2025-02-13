@@ -15,10 +15,12 @@ body{
 .nav{
     width:100vw;
     height:5vw;
+    min-height: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
+    top:10px;
     z-index: 10;
     background-color: #131518;
     animation: nav 0.5s ease-in 0s 1 normal ;
@@ -38,13 +40,15 @@ body{
 h1{
     background-color: transparent;
     font-family: Trirong;
+    font-size: 35px;
     margin-left: 10px;
     color: #e9ecef;
 }
 .list{
     width: 30vw;
     display: flex;
-    font-size: 3.7vw;
+    font-size: 3vw;
+    font-size: calc(20px + 2.5vw);
     justify-content: space-evenly;
 }
 a{
@@ -56,12 +60,15 @@ a{
     right: 10px; /* Adjust as needed */
     width: var(--h);
     height: var(--h);
+    min-width: 25px;
+    min-height: 25px;
     border-radius: 50%;
     border: 2px solid #6c757d;
     border-bottom: 2px solid transparent;
 }
 .stick{
     width: 2px;
+    min-height: 20px;
     height: var(--h);
     background-color:#6c757d;
     position: relative;
@@ -148,7 +155,7 @@ h2{
         border-radius: 15px;
         background-image: linear-gradient(-135deg, rgb(39, 39, 39), black);
         box-shadow: 1px 1px 15px black;
-        padding: 10px;
+        padding: 20px;
         display: grid;
         grid-template-columns: 19.74vw, 8.46vw;
         grid-template-rows: 3.76vw, 15.04vw;
@@ -200,22 +207,20 @@ h2{
 
 }
 .def{
-    display: flex;
+    display: none;
     width:30vw;
-    gap:40px;
+    gap:30px;
     opacity: 0;
     position: relative;
-    right:0vw;
     top:4.5vw;
 }
 .ghi{
     margin-top: 18px;
-    display: flex;
+    display: none;
     width:30vw;
-    gap:40px;
+    gap:30px;
     opacity: 0;
     position: relative;
-    right:0vw;
     top:4.5vw;
 }
 .th1{
@@ -712,5 +717,77 @@ a{
         top:-6vw;
         right:4vw;
         transition-duration: 1.5s;
+    }
+}
+@media (width<440px){
+    .grid{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .identity, .qualification, .python, .web, .Modelling, .Project, .contact, .experience{
+        min-width: 240px;
+        width:240px;
+        margin:20px;
+        margin-top: 30px;
+        font-size: 20px;
+        line-height:23px ;
+    }
+    img{
+        width:200px;
+        height: 200px;
+        place-self: center;
+        margin-top: 40px;
+        margin-bottom:30px;
+        border-radius: 30px 0px 30px 0px;
+    }
+    .intro{
+        place-self: center;
+        text-align: center;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        margin-bottom: 4vw;
+        font-size: 17px;
+        font-family:Trirong;
+    }
+    
+    .qualification {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        min-height: 300px;
+    }
+
+    .qual {
+        width: 80%;
+        max-width: 200px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .text {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .tray{
+        display: none;
+    }
+    .def{display: none;}
+    .ghi{display: none;}
+    .qualification:hover .ghi{
+        margin-bottom: 20px;
+    }
+    .qualification:hover .text{
+        background-color: transparent;
+        font-family: Trirong;
+        font-size: 30px;
+        margin-top:80px;
+        margin-left: 80px;
+        color: #e9ecef;
+    }
+    .qualification:hover .qual{
+        display: none;
     }
 }
