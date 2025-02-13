@@ -307,9 +307,11 @@ h2{
 .py{
     width:3vw;
     height: 4vw;
+    min-width: 40px;
+    min-height: 40px;
     border-radius: 0px;
-    position: relative; 
-    top:0px;
+    position: relative;
+    top:0px; 
     z-index: 3;
 }
 
@@ -757,13 +759,13 @@ a{
         align-items: center;
         text-align: center;
         justify-content: center;
-        min-height: 300px;
+        height: 300px;
     }
 
     .qual {
         width: 80%;
         max-width: 200px;
-        height: auto;
+        margin-top: 300px;
         margin-bottom: 10px;
     }
 
@@ -789,5 +791,78 @@ a{
     }
     .qualification:hover .qual{
         display: none;
+    }
+    .qualification:hover{
+        height:500px;
+        transition-duration: 0.3s;
+    }
+    .qualification:not(:hover){
+        height:300px;
+        transition-duration: 0.3s;
+    }
+    .py{
+        position: relative;
+        top:-40px; 
+        z-index: 3;
+    }
+    
+    .lib{
+        display: flex;
+        width:20vw;
+        height: 5vw;
+        text-align: center;
+        gap: 25px;
+        margin-top:-30px;
+        align-items: center;
+    }
+    .ska{
+        margin-bottom:18px ;
+    }
+    .Project{
+        display: grid;
+        border-radius: 15px;
+        position: relative;
+        animation: appear 0.7s ease-in 0.1s normal;
+    }
+    .result{
+        z-index: 0;
+        display: none;
+    }
+    .empty{
+        width: 200px;
+        height: 200px;
+        display: grid;
+        justify-self: center;
+        position: relative;
+        bottom:30px;
+        background-image: url('https://pictographic.azureedge.net/thumbnails/flat-modern/FpxxvmBevL7kfxq5UuIK.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        filter:grayscale(100);
+        color: #e9ecef;
+    }
+    button{
+        min-width:60px;
+        min-height: 40px;
+        border-radius: 10px;
+    }
+    .text3{
+        position: absolute;
+        bottom:10px;
+        place-self: center;
+        font-size: 20px;
+        color: #ADB5BD;
+        filter: none;
+        font-family:sans-serif;
+        font-weight: 1000;   
+    }
+    .Base{
+        z-index: 3;
+        margin-top:40px;
+        position: relative;
+        bottom: 30px;
+        font-size: 20px;
+        list-style: none;
+        line-height: 40px;
     }
 }
